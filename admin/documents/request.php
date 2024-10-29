@@ -128,9 +128,9 @@ echo '&student-number=';
 echo $row['studentID_no'];
 echo '"class= "text-secondary font-weight-bold text-xs" data-toggle-tooltip" data-original-title= "Edit user"><i class= "fa fa-edit"></i></a> |';
 
-echo '<a href="javascipt:; "data-id="';
+echo '<a href="javascript:; "data-id="';
 echo $row['request_id'];
-echo '"class= "text-secondary font-weight-bold text-xs" data-toggle-tooltip" data-original-title= "Edit user"><i class= "fa fa-trash-alt"></i></a> |';
+echo '"class= "text-secondary font-weight-bold text-xs delete" data-toggle-tooltip" data-original-title= "Edit user"><i class= "fa fa-trash-alt"></i></a> |';
                                                       }
                                                       ?>
 

@@ -146,7 +146,7 @@
 
                   const control_no = document.querySelector('input[name=control_no]').value;
                   const studentID_no = document.querySelector('input[name=studentID_no]').value;
-                  const document_name = document.querySelector('input[name=document_name]').value;
+                  const document_name = document.querySelector('select[name=document_name]').value;
                   const no_ofcopies = document.querySelector('input[name=no_ofcopies]').value;
                   const date_request = document.querySelector('input[name=date_request]').value;
                   // const date_releasing = document.querySelector('input[name=date_releasing]').value;
