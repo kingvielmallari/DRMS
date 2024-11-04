@@ -55,8 +55,6 @@
 
                                                             <div class="dropdown-menu container-fluid" aria-labelledby="dropdownMenuLink" >
                                                             <a class="dropdown-item container-fluid" href="add-user.php">Administrator</a>
-                                                            <a class="dropdown-item container-fluid" href="add-admin-aide.php">Administrative Aide</a>
-                                                            <a class="dropdown-item container-fluid" href="add-admin-assist.php" >Administrative Assistant</a>
                                                         </div>
                                                         </div>
 

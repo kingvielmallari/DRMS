@@ -1,3 +1,16 @@
+<?php
+ob_start();
+
+if ($_SERVER['REQUEST_URI'] !== '/index.php') {
+   
+    header("Location: http://localhost:3000/index.php");
+    die(); 
+}
+
+?>
+
+
+
 <!doctype html>
 <html lang="en">
  
@@ -71,7 +84,7 @@
     <!-- As a heading -->
 <nav class="navbar navbar-dark bg-primary" style="background: rgb(17,10,134);
             background: linear-gradient(90deg, rgba(17,10,134,1) 0%, rgba(9,9,121,1) 28%, rgba(18,105,175,1) 100%);">
-  <span class="navbar-brand mb-0 h1">Student</span>
+  <span class="navbar-brand mb-0 h1">Student Login</span>
 </nav>
     
 

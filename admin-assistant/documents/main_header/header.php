@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/select.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/fixedHeader.bootstrap4.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Online Request of Document</title>
+    <title>PTC DOCUMENT REQUEST MANAGEMENT SYSTEM</title>
     <style>
         ul.navbar-nav li a{
             color: rgb(207, 214, 200) !important;
@@ -82,7 +82,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg fixed-top" id= "head-color" >
-                <a class="navbar-brand" href="index.php"><p id="title-style"><img class="logo-prmsu" src="../assets/images/logo.png" alt ="logo" width="50px" height="50px">&nbsp;&nbsp;Online Request of Document</p></a>
+                <a class="navbar-brand" href="index.php"><p id="title-style"><img class="logo-prmsu" src="../assets/images/logo.png" alt ="logo" width="50px" height="50px">&nbsp;&nbsp;PTC DOCUMENT REQUEST MANAGEMENT SYSTEM</p></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

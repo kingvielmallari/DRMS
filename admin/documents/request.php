@@ -154,7 +154,7 @@ echo '"class= "text-secondary font-weight-bold text-xs delete" data-toggle-toolt
                                                           echo 'email-form-rl.php';
                                                         }
                                                      ?>?request=<?= $row['request_id']; ?>&student-number=<?php echo $row['studentID_no']; ?>" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                                                          <i class="fa fa-envelope"></i>
+                                                         
                                                         </a> 
 
                                                       </td>

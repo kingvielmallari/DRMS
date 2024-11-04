@@ -108,26 +108,7 @@
                     </div>
                     <!-- /. metric -->
                     <!-- metric -->
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-                        <div class="card">
-                            <div class="card-body">
-                               <?php 
-                                    $conn = new class_model();
-                                    $cstudent = $conn->count_numberoftotalpending();
-                               ?>
-                               <?php foreach ($cstudent as $row): ?>
-                                <div class="d-inline-block">
-                                    <h5 class="text-muted"><b>Waiting for Payment</b></h5>
-                                    <h2 class="mb-0"><?= $row['count_pending']; ?></h2>
-                                </div>
-                                <div class="float-right icon-circle-medium  icon-box-lg mt-1" style="background-color:#1269AF">
-                                    <i class="fa fa-credit-card fa-fw fa-sm text-info" style="color:white !important"></i>
-                                </div>
-                                 <?php endforeach;?>
-                            </div>
-                            <a href="pending-payment.php" class="btn btn-primary" style="background-color:#1269AF">View</a>
-                        </div>
-                    </div>
+                
                     <!-- /. metric -->
                     <!-- metric -->
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">

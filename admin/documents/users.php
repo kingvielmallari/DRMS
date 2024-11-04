@@ -20,12 +20,12 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                             <h2 class="pageheader-title"><i class="fa fa-fw fa-user-lock"></i> Users </h2>
+                             <h2 class="pageheader-title"><i class="fa fa-fw fa-user-lock"></i> Admin </h2>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Users</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Admin</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -43,7 +43,7 @@
                                 <div class="card-body">
                                     <div id="message"></div>
                                     <div class="table-responsive">
-                                        <a href="select-designation.php" class="btn btn-sm" style="background-color:#1269AF !important; color:white"><i class="fa fa-fw fa-user-plus"></i> Add User</a><br><br>
+                                        <a href="select-designation.php" class="btn btn-sm" style="background-color:#1269AF !important; color:white"><i class="fa fa-fw fa-user-plus"></i> Add Admin</a><br><br>
                                         <table class="table table-striped table-bordered first">
                                             <thead>
                                                 <tr>

@@ -50,8 +50,8 @@
                         </a>
 
                     <div class="dropdown-menu container-fluid" aria-labelledby="dropdownMenuLink" >
-                        <a class="dropdown-item container-fluid" href="http://localhost/ORDS/admin/" >Admin</a>
-                        <a class="dropdown-item container-fluid" href="http://localhost/ORDS/admin-aide/" >Administrative Aide</a>
+                        <a class="dropdown-item container-fluid" href="http://localhost:3000/admin/index.php" >Registrar Head</a>
+                        
                     </div>
                     </div>
                     </div>
@@ -119,7 +119,7 @@
                                 
                             }else{
                                 $("#btn-login").html('<img src="assets/images/loading.gif" /> &nbsp; Signing In ...');
-                                setTimeout(' window.location.href = "documents/index.php"; ',2000);
+                                setTimeout(' window.location.href = "/admin-assistant/documents/index.php"; ',2000);
                             }
                         });
                     }

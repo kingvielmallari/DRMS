@@ -10,20 +10,16 @@
                             <li class="nav-item ">
                                 <a class="nav-link" href="index.php" ><i class="fa fa-fw fa-tachometer-alt"></i>Dashboard <span class="badge badge-success">6</span></a>
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="course.php"><i class="fa fa-fw fa-certificate"></i>Courses <span class="badge badge-success">6</span></a>
-                            </li>
+            
                             <li class="nav-item ">
                                 <a class="nav-link" href="student.php"><i class="fa fa-fw fa-user-graduate"></i>Students  <span class="badge badge-success">6</span></a>
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="proof-of-payment.php"><i class="fa fa-fw fa-file-image"></i>Proof of Payment <span class="badge badge-success">6</span></a>
-                            </li>
+                           
                             <li class="nav-item ">
                                 <a class="nav-link" href="request.php"><i class="fa fa-fw fa-file"></i>All Requests<span class="badge badge-success">6</span></a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="users.php"><i class="fa fa-fw fa-user-lock"></i>Users <span class="badge badge-success">6</span></a>
+                                <a class="nav-link" href="users.php"><i class="fa fa-fw fa-user-lock"></i>Admin <span class="badge badge-success">6</span></a>
                             </li>     
 
                         </ul>

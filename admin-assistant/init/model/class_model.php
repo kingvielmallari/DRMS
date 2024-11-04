@@ -297,7 +297,7 @@
 		public function delete_payment($payment_id){
 				$sql = "DELETE FROM tbl_payment WHERE payment_id = ?";
 				 $stmt = $this->conn->prepare($sql);
-				$stmt->bind_param("i", $document_id);
+				$stmt->bind_param("i", $payment_id);
 				if($stmt->execute()){
 					$stmt->close();
 					$this->conn->close();

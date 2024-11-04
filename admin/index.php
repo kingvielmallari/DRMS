@@ -1,3 +1,16 @@
+<?php
+ob_start();
+
+if ($_SERVER['REQUEST_URI'] !== '/admin/index.php') {
+   
+    header("Location: http://localhost:3000/admin/index.php");
+    die(); 
+}
+
+?>
+
+
+
 <!doctype html>
 <html lang="en">
  
@@ -34,7 +47,7 @@
  <!-- As a heading -->
  <nav class="navbar navbar-dark bg-primary" style="background: rgb(17,10,134);
             background: linear-gradient(90deg, rgba(17,10,134,1) 0%, rgba(9,9,121,1) 28%, rgba(18,105,175,1) 100%);">
-  <span class="navbar-brand mb-0 h1">Administrator</span>
+  <span class="navbar-brand mb-0 h1">Administrator Login</span>
 </nav>
     <!-- ============================================================== -->
     <!-- login page  -->
@@ -46,17 +59,11 @@
                 <form method="post" name="login_form">
 
                     <div class="form-group">
-                    <div class="dropdown">
-                        <a class="btn btn-dark dropdown-toggle container-fluid" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Admin
-                        </a>
-
-                    <div class="dropdown-menu container-fluid" aria-labelledby="dropdownMenuLink" >
-                        
-                        <a class="dropdown-item container-fluid" href="http://localhost/ORDS/admin-aide/">Administrative Aide</a>
-                        <a class="dropdown-item container-fluid" href="http://localhost/ORDS/admin-assistant/" >Administrative Assistant</a>
-                    </div>
-                    </div>
+                   
+                        <h1 class="btn btn-dark container-fluid" href="#" role="button"  >
+                            Administator
+                        </h1>
+                   
                     </div>
                     <br>
 
@@ -125,7 +132,7 @@
                                 
                             }else{
                                 $("#btn-login").html('<img src="assets/images/loading.gif" /> &nbsp; Signing In ...');
-                                setTimeout(' window.location.href = "documents/index.php"; ',2000);
+                                setTimeout(' window.location.href = "/admin/documents/index.php"; ',2000);
                             }
                         });
                     }
