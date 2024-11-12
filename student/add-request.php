@@ -98,13 +98,13 @@
                                                     <div class="col-12 col-sm-8 col-lg-6">
                                                         <select data-parsley-type="alphanum" type="text" name="document_name" id="document_name" required="" placeholder="" class="form-control">
                                                         
-                                                           <option value="">&larr;Select Document &rarr;</option>
-                                                           <option value="Certified True Copy of Certificate of Registration">Certified True Copy of Certificate of Registration</option>
-                                                           <option value="Certificate of Registration">Certificate of Registration</option>
-                                                           <option value="Certificate of Enrollment">Certificate of Enrollment</option>
-                                                           <option value="Certificate of Grades">Certificate of Grades</option>
-                                                           <option value="Evaluation of Grades">Evaluation of Grades</option>
-                                                           <option value="Good Moral">Good Moral</option>
+                                                        <option value="">&larr;Select Document &rarr;</option>
+                                                        <option value="Certified True Copy of Certificate of Registration">CTC of Certificate of Registration</option>
+                                                        <option value="Certified True Copy of Certificate of Registration">CTC of Grades</option>
+                                                        <option value="Certified True Copy of Certificate of Registration">Transcript of Records</option>
+                                                        <option value="Certificate of Registration">Certificate of Registration</option>
+                                                        <option value="Certificate of Registration">Certificate of Grades</option>
+                                                        <option value="Certificate of Enrollment">Honorable Dismissal</option>
                                                        </select>
                                                     </div>
                                                 </div>

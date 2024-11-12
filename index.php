@@ -1,13 +1,3 @@
-<?php
-ob_start();
-
-if ($_SERVER['REQUEST_URI'] !== '/index.php') {
-   
-    header("Location: http://localhost:3000/index.php");
-    die(); 
-}
-
-?>
 
 
 
@@ -85,6 +75,7 @@ if ($_SERVER['REQUEST_URI'] !== '/index.php') {
 <nav class="navbar navbar-dark bg-primary" style="background: rgb(17,10,134);
             background: linear-gradient(90deg, rgba(17,10,134,1) 0%, rgba(9,9,121,1) 28%, rgba(18,105,175,1) 100%);">
   <span class="navbar-brand mb-0 h1">Student Login</span>
+  <a class="btn btn-light btn-sm" href="http://localhost/drms/admin" role="button" style="margin-left: auto">Admin</a>
 </nav>
     
 
@@ -105,7 +96,7 @@ if ($_SERVER['REQUEST_URI'] !== '/index.php') {
                     <div class="form-group">
                         <label class="custom-control custom-checkbox">
                             <input class="custom-control-input" type="checkbox" id="remember" onclick="myFunction()"><span class="custom-control-label">Show Password</span>
-                            <a href="http://localhost:3000/registration/index.php" class="register">Register</a>
+                            <a href="http://localhost/drms/registration/index.php" class="register">Register</a>
                         </label>
                     </div>
                    <div class="form-group">
@@ -157,7 +148,7 @@ if ($_SERVER['REQUEST_URI'] !== '/index.php') {
                                 $('#alert-msg').html('<div class="alert alert-danger">Incorrect username or password!</div>');
                             }else{
                                 $("#btn-student").html('<img src="assets/images/loading.gif" /> &nbsp; Signing In ...');
-                                setTimeout(' window.location.href = "student/index.php"; ',2000);
+                                setTimeout(' window.location.href = "http://localhost/drms/student/index.php"; ',2000);
                             }
                         });
                     }

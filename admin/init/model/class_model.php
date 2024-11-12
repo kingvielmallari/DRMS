@@ -222,7 +222,7 @@
 		  }
 
 		  public function fetchAll_newrequest(){ 
-            $sql = "SELECT * FROM  tbl_documentrequest WHERE status = 'Received' ORDER BY time_stamp DESC";
+            $sql = "SELECT * FROM  tbl_documentrequest WHERE status = 'Received' ORDER BY date_request DESC";
 				$stmt = $this->conn->prepare($sql); 
 				$stmt->execute();
 				$result = $stmt->get_result();
@@ -235,7 +235,7 @@
 		  }
 
 		  public function fetchAll_releasing(){ 
-            $sql = "SELECT * FROM  tbl_documentrequest WHERE status = 'Releasing' ORDER BY time_stamp DESC";
+            $sql = "SELECT * FROM  tbl_documentrequest WHERE status = 'Releasing' ORDER BY date_request DESC";
 				$stmt = $this->conn->prepare($sql); 
 				$stmt->execute();
 				$result = $stmt->get_result();
@@ -248,7 +248,7 @@
 		  }
 
 		  public function fetchAll_released(){ 
-            $sql = "SELECT * FROM  tbl_documentrequest WHERE status = 'Released' ORDER BY time_stamp DESC";
+            $sql = "SELECT * FROM  tbl_documentrequest WHERE status = 'Released' ORDER BY date_request DESC";
 				$stmt = $this->conn->prepare($sql); 
 				$stmt->execute();
 				$result = $stmt->get_result();

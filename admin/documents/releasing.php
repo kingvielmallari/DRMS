@@ -67,7 +67,7 @@
 
                                                 ?>
                                                 <tr>
-                                                    <td><?= date($row['time_stamp']); ?></td>
+                                                    <td><?= date($row['date_request']); ?></td>
                     
                                                     <td><?= $row['control_no']; ?></td>
                                                     <td><?= $row['studentID_no']; ?></td>
