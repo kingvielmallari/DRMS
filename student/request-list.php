@@ -95,6 +95,8 @@
                                                             echo '<span class="badge bg-warning text-white">Pending Request</span>';
                                                         }else if($row['status'] ==="Released"){
                                                             echo '<span class="badge bg-primary text-white">Released</span>';
+                                                        }else if($row['status'] ==="Declined"){
+                                                            echo '<span class="badge bg-danger text-white">Declined</span>';
                                                         }
                                                      ?> 
                                                     </td>
@@ -102,20 +104,29 @@
 
                                              <td class="align-right">
                                               <div class="box">
-                  <!--                                   <div class="one">
-                                                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                                                    <div class="one">
+                                                        <!-- <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                                                           <i class="fa fa-download"></i>
                                                         </a> &nbsp;</div>
                      -->
-                                                        <div class="three">
-                                                        <a href="edit-request.php?request=<?= $row['request_id']; ?>&student-number=<?php echo $row['studentID_no']; ?>" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                                                          <i class="fa fa-edit"></i>
-                                                        </a> &nbsp;</div>
-<!--                                                         <div class="four">
-                                                         <a href="javascript:;" data-id="<?= $row['request_id']; ?>" class="text-secondary font-weight-bold text-xs delete" data-toggle="tooltip" data-original-title="Edit user">
-                                                          <i class="fa fa-trash-alt"></i>
-                                                        </a></div>
-                                                        </div> -->
+                                                                    <?php if ($row['status'] === "Received") { ?>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="three">
+                                                    <a href="edit-request.php?request=<?= $row['request_id']; ?>&student-number=<?= $row['studentID_no']; ?>" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                                                        <i class="fa fa-edit"></i>
+                                                    </a>
+                                                    </div>
+
+                                                    <div class="four">
+                                                    <a href="javascript:;" data-id="<?= $row['request_id']; ?>" class="text-secondary font-weight-bold text-xs delete" data-toggle="tooltip" data-original-title="Delete user">
+                                                        <i class="fa fa-trash-alt"></i>
+                                                    </a>
+                                                    </div>
+                                                </div>
+                                                <?php } ?>
+
+                                                        
+                                                       
                                                       </td>
                                                   
 
