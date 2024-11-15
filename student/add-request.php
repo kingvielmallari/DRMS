@@ -1,4 +1,10 @@
-       <?php include('main_header/header.php');?>
+<head>
+
+
+
+</head>
+
+<?php include('main_header/header.php');?>
         <!-- ============================================================== -->
         <!-- end navbar -->
         <!-- ============================================================== -->
@@ -162,82 +168,135 @@
           var profileImage = $('#profileImage').text(intials);
         });
     </script>
-      <script>
-          document.addEventListener('DOMContentLoaded', () => {
-              let btn = document.querySelector('#add-request');
-              btn.addEventListener('click', () => {
+    <!-- Modal Structure -->
+<div class="modal fade" id="requestDetailsModal" tabindex="-1" role="dialog" aria-labelledby="requestDetailsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="requestDetailsLabel">Request Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Control No:</strong> <span id="modalControlNo"></span></p>
+        <p><strong>Student ID:</strong> <span id="modalStudentID"></span></p>
+        <p><strong>Email Address:</strong> <span id="modalEmail"></span></p>
+        <p><strong>Document Name:</strong> <span id="modalDocumentName"></span></p>
+        <p><strong>Number of Copies:</strong> <span id="modalCopies"></span></p>
+        <p><strong>Date Requested:</strong> <span id="modalDateRequested"></span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="printRequest">Print</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-                  const control_no = document.querySelector('input[name=control_no]').value;
-                  const studentID_no = document.querySelector('input[name=studentID_no]').value;
-                  const email_address = document.querySelector('input[name=email_address]').value;
-                  const document_name = $('#document_name option:selected').val();
-                  const no_ofcopies = document.querySelector('input[name=no_ofcopies]').value;
-                  const date_request = document.querySelector('input[name=date_request]').value;
-                  // const date_releasing = document.querySelector('input[name=date_releasing]').value;
-                  const student_id = document.querySelector('input[name=student_id]').value;
+<!-- JavaScript for Print functionality -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    let btn = document.querySelector('#add-request');
+    btn.addEventListener('click', () => {
 
-                  var data = new FormData(this.form);
+        const control_no = document.querySelector('input[name=control_no]').value;
+        const studentID_no = document.querySelector('input[name=studentID_no]').value;
+        const email_address = document.querySelector('input[name=email_address]').value;
+        const document_name = $('#document_name option:selected').val();
+        const no_ofcopies = document.querySelector('input[name=no_ofcopies]').value;
+        const date_request = document.querySelector('input[name=date_request]').value;
+        const student_id = document.querySelector('input[name=student_id]').value;
 
-                  data.append('control_no', control_no);
-                  data.append('studentID_no', studentID_no);
-                  data.append('email_address', email_address);
-                  data.append('document_name', document_name);
-                  data.append('no_ofcopies', no_ofcopies);
-                  data.append('date_request', date_request);
-                  // data.append('date_releasing', date_releasing);
-                  data.append('student_id', student_id);
+        var data = new FormData(this.form);
 
+        data.append('control_no', control_no);
+        data.append('studentID_no', studentID_no);
+        data.append('email_address', email_address);
+        data.append('document_name', document_name);
+        data.append('no_ofcopies', no_ofcopies);
+        data.append('date_request', date_request);
+        data.append('student_id', student_id);
 
-              if (control_no === '' ||  studentID_no ==='' ||  email_address ==='' ||  document_name ==='' ||  no_ofcopies ===''||  date_request ===''){
-                      $('#message').html('<div class="alert alert-danger"> Required All Fields!</div>');
-                    }else{
-                       $.ajax({
-                        url: '../init/controllers/add_request.php',
-                          type: "POST",
-                          data: data,
-                          processData: false,
-                          contentType: false,
-                          async: false,
-                          cache: false,
-                        success: function(response) {
-                          $("#message").html(response);
-                           window.scrollTo(0, 0);
-                          },
-                          error: function(response) {
-                            console.log("Failed");
-                          }
-                      });
-                   }
+        if (control_no === '' || studentID_no ==='' || email_address ==='' || document_name ==='' || no_ofcopies ==='' || date_request ===''){
+            $('#message').html('<div class="alert alert-danger"> Required All Fields!</div>');
+        } else {
+            $.ajax({
+                url: '../init/controllers/add_request.php',
+                type: "POST",
+                data: data,
+                processData: false,
+                contentType: false,
+                async: false,
+                cache: false,
+                success: function(response) {
+                    $("#message").html(response);
+                    window.scrollTo(0, 0);
+                    $("#modalControlNo").text(control_no);
+                    $("#modalStudentID").text(studentID_no);
+                    $("#modalEmail").text(email_address);
+                    $("#modalDocumentName").text(document_name);
+                    $("#modalCopies").text(no_ofcopies);
+                    $("#modalDateRequested").text(date_request);  
 
-              });
-          });
-      </script>
-
-
-
-<!--     <script>
-    $('#form').parsley();
-    </script> -->
-    <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
+                    $("#requestDetailsModal").modal("show");
+                },
+                error: function(response) {
+                    console.log("Failed");
+                }
             });
-        }, false);
-    })();
-    </script>
+        }
+    });
+
+    const printBtn = document.getElementById('printRequest');
+
+    printBtn.addEventListener('click', () => {
+        // Get the modal content to print
+        var printContent = document.querySelector('.modal-body').innerHTML;
+        
+        // Add the "Thank you" message with a line break
+        printContent += "<br><p style='text-align: center;'>Thank you for using PTC Registrar Kiosk!!!</p>";
+
+        // Open a new print window
+        var printWindow = window.open('', '', 'height=600,width=800');
+        printWindow.document.write('<html><head><title>Print Request Details</title></head><body>');
+        printWindow.document.write(printContent);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+
+        // Trigger the print dialog
+        printWindow.print();
+    });
+});
+</script>
+
+
+
+
+<div class="modal fade" id="requestDetailsModal" tabindex="-1" role="dialog" aria-labelledby="requestDetailsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="requestDetailsLabel">Request Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Control No:</strong> <span id="modalControlNo"></span></p>
+        <p><strong>Student ID:</strong> <span id="modalStudentID"></span></p>
+        <p><strong>Email Address:</strong> <span id="modalEmail"></span></p>
+        <p><strong>Document Name:</strong> <span id="modalDocumentName"></span></p>
+        <p><strong>Number of Copies:</strong> <span id="modalCopies"></span></p>
+        <p><strong>Date Requested:</strong> <span id="modalDateRequested"></span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="printRequest">Print</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
  

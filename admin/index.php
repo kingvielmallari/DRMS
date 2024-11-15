@@ -18,7 +18,7 @@
        
         height: 100%;
         min-height:100%;
-        background:linear-gradient(0deg, rgba(2, 4, 124, 0.8), rgba(35, 152, 228, 0.4)), url("assets/images/prmsu-bg.jpg");
+        background:linear-gradient(0deg, rgba(2, 4, 124, 0.8), rgba(35, 152, 228, 0.4)), url("/assets/images/prmsu-bg.jpg");
         background-size:cover;
     }
 
