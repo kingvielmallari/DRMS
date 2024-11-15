@@ -37,7 +37,7 @@
  <nav class="navbar navbar-dark bg-primary" style="background: rgb(17,10,134);
             background: linear-gradient(90deg, rgba(17,10,134,1) 0%, rgba(9,9,121,1) 28%, rgba(18,105,175,1) 100%);">
   <span class="navbar-brand mb-0 h1">Administrator Login</span>
-<a class="btn btn-light btn-sm" href="/index.php" role="button" style="margin-left: auto">Student</a>
+<a class="btn btn-light btn-sm" href="/drms/index.php" role="button" style="margin-left: auto">Student</a>
 </nav>
    
     <!-- ============================================================== -->
@@ -123,7 +123,7 @@
                                 
                             }else{
                                 $("#btn-login").html('<img src="assets/images/loading.gif" /> &nbsp; Signing In ...');
-                                setTimeout(' window.location.href = "/admin/documents/index.php"; ',2000);
+                                setTimeout(' window.location.href = "/drms/admin/documents/index.php"; ',2000);
                             }
                         });
                     }

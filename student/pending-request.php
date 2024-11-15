@@ -77,7 +77,7 @@
                                                     <td><?= date("M d, Y",strtotime($row['date_request'])); ?></td>
                                                     <td>
                                                      <?php 
-                                                     if($row['date_releasing'] === ""){
+                                                     if($row['date_releasing'] === NULL){
                                                            echo "";
                                                          }else if($row['date_releasing'] === $row['date_releasing']){
                                                            echo date("M d, Y",strtotime($row['date_releasing']));

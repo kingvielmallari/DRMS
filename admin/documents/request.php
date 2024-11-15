@@ -113,26 +113,26 @@
                                                     </td>
                                                     <td class="align-right">
 
-                                                    <?php
-                                                      if ($row['status'] === 'Released') {
-                                                        echo '';
+                                                    <?php if ($row['status'] == true) { ?>
+    <div class="d-flex align-items-center">
+        <div class="three mr-2"> <!-- Add small margin to the right of the first div -->
+            <a href="edit-request.php?request=<?= $row['request_id']; ?>&student-number=<?= $row['studentID_no']; ?>" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                <i class="fa fa-edit"></i>
+            </a>
+        </div>
 
-                                                      
+        <div class="four">
+            <a href="javascript:;" data-id="<?= $row['request_id']; ?>" class="text-secondary font-weight-bold text-xs delete" data-toggle="tooltip" data-original-title="Delete user">
+                <i class="fa fa-trash-alt"></i>
+            </a>
+        </div>
+    </div>
+<?php } ?>
 
 
-
-                                                      }else{
-echo '<a href="edit-request.php?request=';
-echo $row['request_id'];
-echo '&student-number=';
-echo $row['studentID_no'];
-echo '"class= "text-secondary font-weight-bold text-xs" data-toggle-tooltip" data-original-title= "Edit user"><i class= "fa fa-edit"></i></a> |';
-
-echo '<a href="javascript:; "data-id="';
-echo $row['request_id'];
-echo '"class= "text-secondary font-weight-bold text-xs delete" data-toggle-tooltip" data-original-title= "Edit user"><i class= "fa fa-trash-alt"></i></a> |';
-                                                      }
-                                                      ?>
+                                                                     
+                                                                      
+                                                                    
 
                                                       
                                                         
