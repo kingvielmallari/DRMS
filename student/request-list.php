@@ -93,6 +93,8 @@
                                                             echo '<span class="badge bg-success text-white">Releasing</span>';
                                                         }else if($row['status'] ==="Received"){
                                                             echo '<span class="badge bg-warning text-white">Pending Request</span>';
+                                                        }else if($row['status'] ==="Released"){
+                                                            echo '<span class="badge bg-primary text-white">Released</span>';
                                                         }
                                                      ?> 
                                                     </td>

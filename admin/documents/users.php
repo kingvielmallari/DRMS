@@ -43,7 +43,7 @@
                                 <div class="card-body">
                                     <div id="message"></div>
                                     <div class="table-responsive">
-                                        <a href="select-designation.php" class="btn btn-sm" style="background-color:#1269AF !important; color:white"><i class="fa fa-fw fa-user-plus"></i> Add Admin</a><br><br>
+                                        <a href="add-user.php" class="btn btn-sm" style="background-color:#1269AF !important; color:white"><i class="fa fa-fw fa-user-plus"></i> Add Admin</a><br><br>
                                         <table class="table table-striped table-bordered first">
                                             <thead>
                                                 <tr>
