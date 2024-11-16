@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2024 at 12:25 PM
+-- Generation Time: Nov 16, 2024 at 07:13 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -58,10 +58,10 @@ CREATE TABLE `tbl_documentrequest` (
   `document_name` varchar(255) NOT NULL,
   `no_ofcopies` varchar(255) NOT NULL,
   `date_request` varchar(255) NOT NULL,
-  `date_releasing` varchar(255) NOT NULL,
-  `processing_officer` varchar(255) NOT NULL,
+  `date_releasing` varchar(255) DEFAULT NULL,
+  `processing_officer` varchar(255) DEFAULT NULL,
   `status` varchar(255) NOT NULL,
-  `remarks` varchar(255) NOT NULL,
+  `remarks` varchar(255) DEFAULT NULL,
   `student_id` int(11) NOT NULL,
   `notif` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
@@ -71,7 +71,8 @@ CREATE TABLE `tbl_documentrequest` (
 --
 
 INSERT INTO `tbl_documentrequest` (`request_id`, `control_no`, `studentID_no`, `document_name`, `no_ofcopies`, `date_request`, `date_releasing`, `processing_officer`, `status`, `remarks`, `student_id`, `notif`) VALUES
-(16, 'CTRL-02279', '2024-1234', 'Certificate of Registration', '2', '2024-11-12', '', 'Registrar Head', 'Releasing', '', 9, 1);
+(128, 'CTRL-92910', '2021-3532', 'Certified True Copy of Certificate of Registration', '4', '2024-11-16', '2024-11-16', 'Registrar Heads', 'Waiting for Payment', '', 10, 1),
+(131, 'CTRL-3309', '2024-1234', 'Certified True Copy of Certificate of Registration', '2', '2024-11-16', '2024-11-16', 'King Mallari', 'Releasing', NULL, 9, 1);
 
 -- --------------------------------------------------------
 
@@ -103,8 +104,10 @@ CREATE TABLE `tbl_student` (
 --
 
 INSERT INTO `tbl_student` (`student_id`, `studentID_no`, `first_name`, `middle_name`, `last_name`, `course`, `year_level`, `date_ofbirth`, `gender`, `complete_address`, `email_address`, `mobile_number`, `username`, `password`, `account_status`, `date_created`) VALUES
-(9, '2024-1234', 'Bernadette', 'Mendoza', 'Parman', 'BSIT', '3rd Year', '2002-05-28', 'Female', 'Navotas City', 'bey@gmail.com', '09123456789', 'bey', 'bey123', 'Active', '2024-10-29'),
-(10, '2021-3532', 'Bae', 'Kim', 'Suzy', 'BSIT', '2nd Year', '2000-02-02', 'Female', 'South Korea', 'suzy@gmail.com', '09511456142', 'suzy', 'suzy123', 'Active', '2024-10-30');
+(9, '2024-1234', 'Bernadette', 'Mendoza', 'Parman', 'CCS', '3rd Year', '2002-05-28', 'Female', 'Navotas City', 'bey@gmail.com', '09123456789', 'bey', 'beybey', 'Active', '2024-10-29'),
+(10, '2021-3532', 'Bae', 'Kim', 'Suzy', 'BSIT', '2nd Year', '2000-02-02', 'Female', 'South Korea', 'suzy@gmail.com', '09511456142', 'suzy', 'suzy12', 'Active', '2024-10-30'),
+(12, '2021-2130', 'King', 'Labro', 'Mallari', 'BSIT', '3rd Year', '2003-03-23', 'Male', 'Taguig City', 'king@gmail.com', '09123456789', 'king', 'king123', 'Active', '2024-11-15'),
+(13, '2021-2432', 'Chuchi', 'Labro', 'Mallari', 'CCS', '2nd Year', '2003-02-23', 'Male', 'Taguig City', 'chuchi@gmail.com', '09098765678', 'chuchi', 'chuhci123', 'Active', '2024-11-16');
 
 -- --------------------------------------------------------
 
@@ -130,7 +133,8 @@ CREATE TABLE `tbl_usermanagement` (
 
 INSERT INTO `tbl_usermanagement` (`user_id`, `complete_name`, `desgination`, `email_address`, `phone_number`, `username`, `password`, `status`, `role`) VALUES
 (1, 'Registrar Head', 'programmer', 'admin@gmail.com', '09978978999', 'admin', 'admin', 'Active', 'Administrator'),
-(7, 'King Viel Mallari', 'Administrator', 'king@gmail.com', '09123456783', 'king', 'king123', 'Active', '');
+(7, 'King Mallari', 'Administrator', 'king@gmail.com', '09123456783', 'king', 'king123', 'Active', ''),
+(9, 'Berna', 'Administrator', 'mallariking0@gmail.com', '213321', 'bey', 'bey123', 'Active', '');
 
 --
 -- Indexes for dumped tables
@@ -174,19 +178,19 @@ ALTER TABLE `tbl_course`
 -- AUTO_INCREMENT for table `tbl_documentrequest`
 --
 ALTER TABLE `tbl_documentrequest`
-  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
 -- AUTO_INCREMENT for table `tbl_student`
 --
 ALTER TABLE `tbl_student`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tbl_usermanagement`
 --
 ALTER TABLE `tbl_usermanagement`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
