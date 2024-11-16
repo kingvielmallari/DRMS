@@ -238,8 +238,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     $("#modalDocumentName").text(document_name);
                     $("#modalCopies").text(no_ofcopies);
                     $("#modalDateRequested").text(date_request);  
-
                     $("#requestDetailsModal").modal("show");
+
+                    $('#requestDetailsModal').on('hidden.bs.modal', function () {
+                    window.location.href = "/drms/student/request-list.php";
+        });
                 },
                 error: function(response) {
                     console.log("Failed");

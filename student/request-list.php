@@ -110,7 +110,7 @@
                                                                                 </a> &nbsp;</div>
                                             -->
                                                                                             <?php if ($row['status'] === "Received") { ?>
-                                                                        <div class="d-flex align-items-center">
+                                                                             <div class="d-flex align-items-center">
                                                                             <div class="three ">
                                                                             <a href="edit-request.php?request=<?= $row['request_id']; ?>&student-number=<?= $row['studentID_no']; ?>" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                                                                                 <i class="fa fa-edit"></i>
@@ -125,7 +125,7 @@
                                                                         </div>
                                                                         <?php } ?>
 
-                                                                        <?php if ($row['status'] === "Released" || "Declined") { ?>
+                                                                        <?php if ($row['status'] === "Declined" || $row['status'] === "Released") { ?>
                                                                         <div class="d-flex align-items-center">
                                                                          
 
@@ -136,6 +136,10 @@
                                                                             </div>
                                                                         </div>
                                                                         <?php } ?>
+
+                                                                        
+
+                                                                        
 
                                                                                 
                                                                             
