@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/buttons.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/select.bootstrap4.css">
     <link rel="stylesheet" type="text/css" href="../assets/vendor/datatables/css/fixedHeader.bootstrap4.css">
-    <script src="../assets/extensions/print/bootstrap-table-print.js"></script>
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>PTC DOCUMENT REQUEST MANAGEMENT SYSTEM</title>
     <style>

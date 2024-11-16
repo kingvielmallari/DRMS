@@ -18,7 +18,7 @@
        
         height: 100%;
         min-height:100%;
-        background:linear-gradient(0deg, rgba(2, 4, 124, 0.8), rgba(35, 152, 228, 0.4)), url("/assets/images/prmsu-bg.jpg");
+        background:linear-gradient(0deg, rgba(2, 4, 124, 0.8), rgba(35, 152, 228, 0.4)), url("/drms/assets/images/ptc-bg.jpg");
         background-size:cover;
     }
 
@@ -45,7 +45,7 @@
     <!-- ============================================================== -->
     <div class="splash-container" style="margin-top: 30px">
         <div class="card ">
-            <div class="card-header text-center"><a href="index.html"><img class="prmsu_logo" src="assets/images/prmsu_logo.jpg" alt="prmsu_logo" height="200px"></a></div>
+            <div class="card-header text-center"><img class="prmsu_logo" src="assets/images/prmsu_logo.jpg" alt="prmsu_logo" height="200px"></div>
             <div class="card-body">
                 <form method="post" name="login_form">
 

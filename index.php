@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/libs/css/style.css">
-    <script src="/assets/js//jquery.min.js"></script>
+    <link rel="stylesheet" href="/drms/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/drms/assets/libs/css/style.css">
+    <script src="/drms/assets/js/jquery.min.js"></script>
     <style>
     html,
     body {
@@ -82,7 +82,7 @@
     <!-- ============================================================== -->
     <div class="splash-container" style="margin-top: 50px">
         <div class="card ">
-            <div class="card-header text-center"><a href="index.html"><img class="prmsu_logo" src="assets/images/prmsu_logo.jpg" alt="prmsu_logo" height="200px"></a></div>
+            <div class="card-header text-center"><img class="prmsu_logo" src="assets/images/prmsu_logo.jpg" alt="prmsu_logo" height="200px"></div>
             <div class="card-body">
                 <form method="post" name="login_sform">
                     <div class="form-group">

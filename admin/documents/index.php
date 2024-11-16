@@ -187,7 +187,7 @@
     <!-- main js-->
     <script src="../assets/libs/js/main-js.js"></script>
     <!-- dashboard sales js-->
-    <script src="../assets/libs/js/dashboard-sales.js"></script>
+    
     <script type="text/javascript">
         $(document).ready(function(){
             var firstName = $('#firstName').text();

@@ -216,51 +216,11 @@
 			}
 		}
 
-		public function delete_request($request_id){
-				$sql = "DELETE FROM tbl_documentrequest WHERE request_id = ?";
-				 $stmt = $this->conn->prepare($sql);
-				$stmt->bind_param("i", $document_id);
-				if($stmt->execute()){
-					$stmt->close();
-					$this->conn->close();
-					return true;
-				}
-			}
+		
 
-    public function fetchAll_payment(){ 
-            $sql = "SELECT *,CONCAT(tbl_student.first_name, ', ' ,tbl_student.middle_name, ' ' ,tbl_student.last_name) as student_name FROM  tbl_payment INNER JOIN tbl_student ON tbl_student.student_id =  tbl_payment.student_id ORDER BY tbl_payment.student_id DESC";
-				$stmt = $this->conn->prepare($sql);
-				$stmt->execute();
-				$result = $stmt->get_result();
-		        $data = array();
-		         while ($row = $result->fetch_assoc()) {
-		                   $data[] = $row;
-		            }
-		         return $data;
 
-		  }
 
-		  public function edit_payment($control_no, $total_amount, $amount_paid, $date_ofpayment, $proof_ofpayment, $status, $payment_id){
-			$sql = "UPDATE `tbl_payment` SET  `control_no` = ?, `total_amount` = ?, `amount_paid` = ?, `date_ofpayment` = ?, `proof_ofpayment` = ?, `status` = ?  WHERE payment_id = ?";
-			 $stmt = $this->conn->prepare($sql);
-			$stmt->bind_param("ssssssi", $control_no, $total_amount, $amount_paid, $date_ofpayment, $proof_ofpayment, $status, $payment_id);
-			if($stmt->execute()){
-				$stmt->close();
-				$this->conn->close();
-				return true;
-			}
-		}
-
-		public function delete_payment($payment_id){
-				$sql = "DELETE FROM tbl_payment WHERE payment_id = ?";
-				 $stmt = $this->conn->prepare($sql);
-				$stmt->bind_param("i", $document_id);
-				if($stmt->execute()){
-					$stmt->close();
-					$this->conn->close();
-					return true;
-				}
-			}
+	
 
 	    public function add_user($complete_name, $desgination, $email_address, $phone_number, $username, $password, $status){
 	       $stmt = $this->conn->prepare("INSERT INTO `tbl_usermanagement` (`complete_name`, `desgination`, `email_address`, `phone_number`, `username`, `password`, `status`) VALUES(?, ?, ?, ?, ?, ?, ?)") or die($this->conn->error);
@@ -273,7 +233,7 @@
 		}
 
 	    public function fetchAll_user(){ 
-            $sql = "SELECT * FROM  tbl_usermanagement";
+            $sql = "SELECT * FROM  tbl_usermanagement ";
 				$stmt = $this->conn->prepare($sql); 
 				$stmt->execute();
 				$result = $stmt->get_result();

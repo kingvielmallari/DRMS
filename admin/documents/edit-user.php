@@ -195,22 +195,28 @@
               if (complete_name === '' &&  desgination ==='' &&  email_address ==='' &&  phone_number ==='' &&  username ==='' &&  password ===''){
                       $('#message1').html('<div class="alert alert-danger"> Required All Fields!</div>');
                     }else{
-                       $.ajax({
-                        url: '../init/controllers/edit_user.php',
-                          type: "POST",
-                          data: data,
-                          processData: false,
-                          contentType: false,
-                          async: false,
-                          cache: false,
-                        success: function(response) {
-                          $("#message1").html(response);
-                           window.scrollTo(0, 0);
-                          },
-                          error: function(response) {
-                            console.log("Failed");
-                          }
-                      });
+                        $.ajax({
+  url: '../init/controllers/edit_user.php',
+  type: "POST",
+  data: data,
+  processData: false,
+  contentType: false,
+  async: true,  // Change this to true (or remove the line, as true is the default)
+  cache: false,
+  success: function(response) {
+    // Update the message on the page
+    $("#message1").html(response);
+
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
+
+    // Redirect to the new URL
+    window.location.href = '/drms/admin/documents/users.php';
+  },
+  error: function(response) {
+    console.log("Failed");
+  }
+});
                    }
 
               });
