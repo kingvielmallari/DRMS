@@ -18,7 +18,7 @@
        
         height: 100%;
         min-height:100%;
-        background:linear-gradient(0deg, rgba(2, 4, 124, 0.8), rgba(35, 152, 228, 0.4)), url("/drms/assets/images/ptc-bg.jpg");
+        background:linear-gradient(0deg, rgba(2, 4, 124, 0.8), rgba(35, 152, 228, 0.4)), url("assets/images/ptc-bg.jpg");
         background-size:cover;
     }
 
@@ -123,7 +123,7 @@
                                 
                             }else{
                                 $("#btn-login").html('<img src="assets/images/loading.gif" /> &nbsp; Signing In ...');
-                                setTimeout(' window.location.href = "/drms/admin/documents/index.php"; ',2000);
+                                setTimeout(' window.location.href = "admin/documents/index.php"; ',2000);
                             }
                         });
                     }

@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/drms/assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/drms/assets/libs/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/css/style.css">
     <script src="/drms/assets/js/jquery.min.js"></script>
     <style>
     html,
@@ -73,7 +73,7 @@
 <nav class="navbar navbar-dark bg-primary" style="background: rgb(17,10,134);
             background: linear-gradient(90deg, rgba(17,10,134,1) 0%, rgba(9,9,121,1) 28%, rgba(18,105,175,1) 100%);">
   <span class="navbar-brand mb-0 h1">Student Login</span>
-  <a class="btn btn-light btn-sm" href="/drms/admin/index.php" role="button" style="margin-left: auto">Admin</a>
+  <a class="btn btn-light btn-sm" href="admin/index.php" role="button" style="margin-left: auto">Admin</a>
 </nav>
     
 
@@ -146,7 +146,7 @@
                                 $('#alert-msg').html('<div class="alert alert-danger">Incorrect username or password!</div>');
                             }else{
                                 $("#btn-student").html('<img src="assets/images/loading.gif" /> &nbsp; Signing In ...');
-                                setTimeout(' window.location.href = "/drms/student/index.php"; ',2000);
+                                setTimeout(' window.location.href = "student/index.php"; ',2000);
                             }
                         });
                     }
